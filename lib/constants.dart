@@ -1,4 +1,9 @@
+import 'package:delicias_app/components/bottom_navigation.dart';
+import 'package:delicias_app/components/filter_button.dart';
+import 'package:delicias_app/components/recipe_type_button.dart';
 import 'package:flutter/material.dart';
+
+// LOGINPAGE
 
 const kLoginTitle = TextStyle(
   fontSize: 40.0,
@@ -41,3 +46,72 @@ const kLoginBackgroundImage = BoxDecoration(
     ],
   ),
 );
+
+// HOMESCREEN
+
+const kHomeScreenBackgroundColor = Color(0xFFF5F5F5);
+const kMainBodyPadding = EdgeInsets.all(8.0);
+const kSearchBarPadding = EdgeInsets.symmetric(horizontal: 16);
+const kRecipeTypeButton = EdgeInsets.symmetric(horizontal: 16, vertical: 16.0);
+
+const kBottomNavigation = BottomNavigation();
+
+const kRoundedRectangleBorder = RoundedRectangleBorder(
+  borderRadius: BorderRadius.all(
+    Radius.circular(10),
+  ),
+);
+
+const kTitlePadding = Padding(
+  padding: EdgeInsets.fromLTRB(16, 56, 16, 6),
+  child: Text(
+    'Encontre As Melhores Receitas De Minas. ♨️',
+    textAlign: TextAlign.left,
+    style: TextStyle(
+      fontSize: 25.0,
+      fontWeight: FontWeight.bold,
+    ),
+  ),
+);
+
+const kSearchBarRowContent = Flexible(
+  flex: 4,
+  child: TextField(
+    clipBehavior: Clip.antiAliasWithSaveLayer,
+    decoration: InputDecoration(
+      filled: true,
+      fillColor: Colors.white,
+      prefixIcon: Padding(
+        padding: EdgeInsets.fromLTRB(15, 0, 20, 0),
+        child: Icon(
+          Icons.search,
+          size: 35,
+          color: Colors.black12,
+        ),
+      ),
+      hintText: 'Procurar',
+      hintStyle: TextStyle(
+        color: Colors.black12,
+      ),
+      enabledBorder: OutlineInputBorder(
+        borderSide: BorderSide(color: Colors.white, width: 1.0),
+        borderRadius: BorderRadius.all(
+          Radius.circular(20),
+        ),
+      ),
+    ),
+  ),
+);
+
+const kSearchRow = [
+  kSearchBarRowContent,
+  FilterButton(),
+];
+
+const kRecipeTypeButtons = [
+  RecipeTypeButton(key: Key('a'), buttonTitle: 'Todos'),
+  RecipeTypeButton(key: Key('b'), buttonTitle: 'Café'),
+  RecipeTypeButton(key: Key('c'), buttonTitle: 'Almoço'),
+  RecipeTypeButton(key: Key('d'), buttonTitle: 'Jantar'),
+  RecipeTypeButton(key: Key('e'), buttonTitle: 'Doces'),
+];
