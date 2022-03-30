@@ -1,7 +1,16 @@
 import 'package:delicias_app/components/bottom_navigation.dart';
 import 'package:delicias_app/components/filter_button.dart';
 import 'package:delicias_app/components/recipe_type_button.dart';
+import 'package:delicias_app/main.dart';
+import 'package:delicias_app/screens/home_screen.dart';
+import 'package:delicias_app/screens/login_page.dart';
 import 'package:flutter/material.dart';
+
+// MAIN
+
+const kMainStatelessWidget = ReceitasDeMinas();
+const kLoginPageRoute = LoginPage();
+const kHomeScreenRoute = HomeScreen();
 
 // LOGINPAGE
 
@@ -50,10 +59,9 @@ const kLoginBackgroundImage = BoxDecoration(
 // HOMESCREEN
 
 const kHomeScreenBackgroundColor = Color(0xFFF5F5F5);
-const kMainBodyPadding = EdgeInsets.all(8.0);
+const kMainBodyPadding = EdgeInsets.fromLTRB(8, 8, 8, 0);
 const kSearchBarPadding = EdgeInsets.symmetric(horizontal: 16);
 const kRecipeTypeButton = EdgeInsets.symmetric(horizontal: 16, vertical: 16.0);
-
 const kBottomNavigation = BottomNavigation();
 
 const kRoundedRectangleBorder = RoundedRectangleBorder(

@@ -13,7 +13,9 @@ class LoginButton extends StatelessWidget {
       margin: const EdgeInsets.fromLTRB(75, 35, 75, 70),
       child: SignInButton(
         Buttons.Google,
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, '/HomeScreen');
+        },
       ),
     );
   }

@@ -18,7 +18,7 @@ class RecipeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       //color: Colors.blue,
-      margin: const EdgeInsets.symmetric(horizontal: 16.0),
+      margin: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(22.5),
       ),
@@ -27,7 +27,7 @@ class RecipeCard extends StatelessWidget {
       borderOnForeground: true,
       clipBehavior: Clip.antiAliasWithSaveLayer,
       child: Container(
-        height: 200.0,
+        height: 190.0,
         width: 100.0,
         decoration: BoxDecoration(
           image: DecorationImage(

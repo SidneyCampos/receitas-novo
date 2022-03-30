@@ -16,7 +16,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       backgroundColor: kHomeScreenBackgroundColor,
       bottomNavigationBar: kBottomNavigation,
-      // floatingActionButton: const FloatingActionButton(onPressed: null),
       body: Padding(
         padding: kMainBodyPadding,
         child: Column(
@@ -38,12 +37,33 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: kRecipeTypeButtons,
               ),
             ),
-            RecipeCard(
-              key: UniqueKey(),
-              cardImage: const AssetImage('recipeImages/feijao_tropeiro.jpg'),
-              recipeTitle: 'Feijão Tropeiro',
-              ingredients: 10,
-              minutes: 20,
+            Expanded(
+              child: ListView(children: [
+                RecipeCard(
+                  key: UniqueKey(),
+                  cardImage:
+                      const AssetImage('recipeImages/feijao_tropeiro.jpg'),
+                  recipeTitle: 'Feijão Tropeiro',
+                  ingredients: 10,
+                  minutes: 20,
+                ),
+                RecipeCard(
+                  key: UniqueKey(),
+                  cardImage:
+                      const AssetImage('recipeImages/frango_com_quiabo.jpg'),
+                  recipeTitle: 'Frango com quiabo',
+                  ingredients: 6,
+                  minutes: 50,
+                ),
+                RecipeCard(
+                  key: UniqueKey(),
+                  cardImage:
+                      const AssetImage('recipeImages/frango_com_quiabo.jpg'),
+                  recipeTitle: 'Frango com quiabo',
+                  ingredients: 6,
+                  minutes: 50,
+                ),
+              ]),
             ),
           ],
         ),
